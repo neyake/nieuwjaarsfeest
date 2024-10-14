@@ -1,0 +1,212 @@
+/* Algemene reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f1e1; /* Licht beige achtergrondkleur */
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.invite-card {
+    background: linear-gradient(135deg, #e6dcc7, #d3c5a8); /* Beige gradatie */
+    border-radius: 15px;
+    padding: 20px;
+    color: #5b4636; /* Donkerbeige/bruin voor de tekst */
+    text-align: center;
+}
+
+.image-section img {
+    width: auto; /* Zorg ervoor dat de breedte automatisch is */
+    height: 500px; /* Pas de hoogte aan naar de gewenste waarde */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed wordt weergegeven */
+    border-radius: 10px; /* Maak de hoeken iets afgerond */
+}
+
+.text-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Tekst met eenvoudige animatie */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #e6dcc7, 0 0 10px #d3c5a8, 0 0 15px #cbb38a;
+    }
+    50% {
+        text-shadow: 0 0 20px #d3c5a8, 0 0 30px #cbb38a, 0 0 40px #a38b6b;
+    }
+}
+
+.animate-text {
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+.text-section p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #cbb38a; /* Beige knop */
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transitie toegevoegd voor kleur en grootte */
+}
+
+.btn:hover {
+    background-color: #a38b6b; /* Donkerder beige als je erover heen gaat */
+    transform: scale(1.1); /* Vergroot de knop met 10% bij hover */
+}
+
+.details h2 {
+    font-size: 22px;
+    color: #a38b6b; /* Donker beige tint */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4f1e1;
+    color: #333;
+}
+
+.btn {
+    margin-bottom: 30px; /* Voeg 30px ruimte toe onder de knop */
+    padding: 12px 25px;
+    background-color: #cbb38a;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+form button:hover {
+    background-color: #a38b6b;
+    transform: scale(1.1); /* Vergroot de knop met 10% bij hover */
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+}
+
+footer a {
+    color: #a38b6b;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8b7356;
+}
+
+hier begint 
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5dc; /* Lichtbeige achtergrond */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #8B4513; /* Donkerbruin voor koppen */
+    margin-bottom: 15px;
+    text-align: center; /* Centraal uitlijnen */
+    margin-bottom: 20px;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+    text-align: center; /* Centraal uitlijnen */
+}
+
+.btn {
+    display: inline-block;
+    margin: 20px auto; /* Centreren en wat ruimte */
+    padding: 15px 30px;
+    background-color: #cbb38a; /* Knopkleur */
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 25px; /* Ronde knoppen */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid #8B4513; /* Donkerbruin rand */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
+}
+
+.btn:hover {
+    background-color: #8B4513; /* Donkerbruin bij hover */
+    transform: scale(1.05); /* Maak de knop groter bij hover */
+}
+
+section {
+    padding: 30px;
+    margin: 20px auto;
+    margin-bottom: 20p;
+    max-width: 600px; /* Max breedte van de secties */
+    background-color: white; /* Wit achtergrond voor secties */
+    border-radius: 15px; /* Ronde hoeken */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #cbb38a; /* Knopkleur rand */
+    font-size: 16px;
+    resize: none; /* Geen formaat wijziging */
+}
+
+textarea:focus {
+    outline: none; /* Geen rand bij focus */
+    border-color: #8B4513; /* Donkerbruin rand bij focus */
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+    text-align: center; /* Centraal uitlijnen */
+}
