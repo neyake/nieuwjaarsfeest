@@ -201,7 +201,7 @@ h1 {
 
 .img-hero {
     width: 100%; /* De afbeelding vult de breedte van het scherm */
-    max-width: 300px; /* Maximale breedte zodat het niet te groot wordt op desktops */
+    max-width: 600px; /* Maximale breedte zodat het niet te groot wordt op desktops */
     height: auto; /* Houd de verhouding van de afbeelding goed */
     object-fit: cover; /* Zorg ervoor dat de afbeelding netjes wordt weergegeven */
     border-radius: 10px; /* Afgeronde hoeken */
@@ -209,7 +209,7 @@ h1 {
 
 .google-maps {
     width: 100%; /* De kaart vult de breedte van het scherm */
-    max-width: 600px; /* Maximale breedte op desktops */
+    max-width: 400px; /* Maximale breedte op desktops */
     height: 300px;
     border: none;
     margin-top: 20px;
