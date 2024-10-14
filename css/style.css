@@ -208,11 +208,13 @@ h1 {
 }
 
 .google-maps {
-    width: 80%; /* De kaart vult de breedte van het scherm */
-    max-width: 400px; /* Maximale breedte op desktops */
-    height: 300px;
-    border: none;
-    margin-top: 20px;
+    width: 100%;           /* Zorgt ervoor dat het de container volledig vult */
+    max-width: 600px;      /* Limiteer de maximale breedte op grotere schermen */
+    height: 300px;         /* Vaste hoogte op grotere schermen */
+    border: none;          /* Verwijder de standaard rand */
+    border-radius: 10px;   /* Afronding van de hoeken */
+    margin: 20px 0;        /* Ruimte boven en onder de Google Maps */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor een mooi effect */
 }
 
 /* Media Query voor Schermen Kleiner dan 600px (mobiele apparaten) */
