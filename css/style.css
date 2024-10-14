@@ -208,7 +208,7 @@ h1 {
 }
 
 .google-maps {
-    width: 100%; /* De kaart vult de breedte van het scherm */
+    width: 80%; /* De kaart vult de breedte van het scherm */
     max-width: 400px; /* Maximale breedte op desktops */
     height: 300px;
     border: none;
