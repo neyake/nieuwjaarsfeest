@@ -179,34 +179,53 @@ p {
     transform: scale(1.05); /* Maak de knop groter bij hover */
 }
 
-section {
-    padding: 30px;
-    margin: 20px auto;
-    margin-bottom: 20p;
-    max-width: 600px; /* Max breedte van de secties */
-    background-color: white; /* Wit achtergrond voor secties */
-    border-radius: 15px; /* Ronde hoeken */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Schaduw voor diepte */
+section body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f2e9; /* Beige achtergrond */
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 2px solid #cbb38a; /* Knopkleur rand */
-    font-size: 16px;
-    resize: none; /* Geen formaat wijziging */
+.container {
+    display: flex;
+    flex-direction: column; /* Standaard worden items onder elkaar weergegeven */
+    align-items: center; /* Elementen worden in het midden uitgelijnd */
+    padding: 20px;
 }
 
-textarea:focus {
-    outline: none; /* Geen rand bij focus */
-    border-color: #8B4513; /* Donkerbruin rand bij focus */
+h1 {
+    text-align: center;
+    margin: 20px 0;
 }
 
-footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: #777;
-    text-align: center; /* Centraal uitlijnen */
+.img-hero {
+    width: 100%; /* De afbeelding vult de breedte van het scherm */
+    max-width: 600px; /* Maximale breedte zodat het niet te groot wordt op desktops */
+    height: auto; /* Houd de verhouding van de afbeelding goed */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding netjes wordt weergegeven */
+    border-radius: 10px; /* Afgeronde hoeken */
+}
+
+.google-maps {
+    width: 100%; /* De kaart vult de breedte van het scherm */
+    max-width: 600px; /* Maximale breedte op desktops */
+    height: 300px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Media Query voor Schermen Kleiner dan 600px (mobiele apparaten) */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .img-hero {
+        max-width: 100%; /* Zorg ervoor dat de afbeelding de volledige breedte van de container vult op mobiel */
+    }
+
+    .google-maps {
+        max-width: 100%; /* Zorg ervoor dat de kaart ook de volledige breedte van de container vult */
+    }
 }
