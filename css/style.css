@@ -201,7 +201,7 @@ h1 {
 
 .img-hero {
     width: 100%; /* De afbeelding vult de breedte van het scherm */
-    max-width: 600px; /* Maximale breedte zodat het niet te groot wordt op desktops */
+    max-width: 300px; /* Maximale breedte zodat het niet te groot wordt op desktops */
     height: auto; /* Houd de verhouding van de afbeelding goed */
     object-fit: cover; /* Zorg ervoor dat de afbeelding netjes wordt weergegeven */
     border-radius: 10px; /* Afgeronde hoeken */
