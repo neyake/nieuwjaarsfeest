@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"> <!-- Verwijzing naar styles.css -->
+    <title>Feestherinneringen</title>
+</head>
+<body>
+    <section class="herinneringen">
+        <h1>Deel je Feestherinneringen!</h1>
+        <p>Wat is jouw mooiste herinnering van een vorig feest? Of heb je wensen voor het nieuwe jaar? Deel ze hieronder!</p>
+        
+        <form id="herinneringen-form">
+            <textarea id="herinnering" placeholder="Typ hier je herinnering of wens..." rows="4" required></textarea>
+            <button type="submit" class="btn">Verstuur</button>
+        </form>
+
+        <div id="feedback" style="display:none;">
+            <h2>Bedankt voor je bijdrage!</h2>
+            <p>We zijn benieuwd naar jouw verhaal!</p>
+        </div>
+
+        <h2>Deel jouw gedachten:</h2>
+        <div id="verhalen">
+            <p><strong>Nonkel Luc:</strong> Het gezelig samen zijn met iedereen</p>
+            <p><strong>Tante Lydia:</strong> Ik kijk ernaar uit om weer met jullie te proosten!</p>
+        </div>
+
+        <h2>Jouw Inzendingen:</h2>
+        <div id="antwoorden">
+            <!-- Hier komen de antwoorden -->
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Nieuwjaar Feest Hermans. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('herinneringen-form');
+        const feedbackDiv = document.getElementById('feedback');
+        const antwoordenDiv = document.getElementById('antwoorden');
+
+        form.onsubmit = function(event) {
+            event.preventDefault(); // Voorkom de standaard verzendactie
+            const herinnering = document.getElementById('herinnering').value; // Verkrijg de waarde van het tekstgebied
+            
+            // Maak een nieuw paragraafelement en voeg het toe aan de antwoorden div
+            const nieuweHerinnering = document.createElement('p');
+            nieuweHerinnering.innerHTML = `<strong>Jij:</strong> ${herinnering}`;
+            antwoordenDiv.appendChild(nieuweHerinnering);
+
+            feedbackDiv.style.display = 'block'; // Toon het feedbackbericht
+            form.reset(); // Reset het formulier
+        }
+    </script>
+</body>
+</htm

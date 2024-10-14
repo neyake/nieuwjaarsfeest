@@ -1,0 +1,39 @@
+
+
+<?php
+// Verwerk formulier als het is ingediend
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verkrijg de gegevens van het formulier
+    $naam = htmlspecialchars($_POST['naam']);
+    $email = htmlspecialchars($_POST['email']);
+    $reden = htmlspecialchars($_POST['reden']);
+
+    // E-mail instellingen
+    $to = "neya.polfliet@gmail.com"; // Vervang dit door je echte e-mailadres
+    $subject = "Afwezigheid voor het feest van 4 januari";
+    $message = "Naam: $naam\nE-mail: $email\nReden van afwezigheid: $reden";
+    $headers = "From: $email";
+
+    // Stuur de e-mail
+    if (mail($to, $subject, $message, $headers)) {
+        // E-mail succesvol verzonden
+        echo '<script>alert("Bedankt! We hebben je afwezigheid genoteerd.");</script>';
+    } else {
+        // E-mail niet verzonden
+        echo '<script>alert("Er was een probleem met het verzenden van je afwezigheid.");</script>';
+    }
+}
+?>
+
+<section class="afwezigheid">
+    <h1>Afwezigheid Melden</h1>
+    <p>Als je niet kunt komen, laat het ons weten door het formulier hieronder in te vullen.</p>
+    
+    <form id="afwezigheid-form" action="" method="post"> <!-- Leeg action-veld voor zelfverwerking -->
+        <input type="text" id="naam" name="naam" placeholder="Je naam" required>
+        <input type="email" id="email" name="email" placeholder="Je e-mailadres" required>
+        <textarea id="reden" name="reden" placeholder="Waarom ben je afwezig?" rows="4" required></textarea>
+        <button type="submit" class="btn">Verstuur</button>
+    </form>
+</section>
+    
